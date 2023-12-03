@@ -1,4 +1,4 @@
-package puzzle.solutions;
+package puzzle.solutions.day.one;
 
 import java.util.HashSet;
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.Set;
 
 import static java.util.Map.entry;
 
-public class Dec_1_P2 {
+public class P2 {
 
     Map<String, Integer> VALID_DIGITS = Map.ofEntries(
             entry("0", 0),

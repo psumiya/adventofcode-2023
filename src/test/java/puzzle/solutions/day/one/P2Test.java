@@ -1,17 +1,17 @@
-package puzzle.solutions;
+package puzzle.solutions.day.one;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Dec_1_P1Test {
+public class P2Test {
 
-    private Dec_1_P1 classUnderTest;
+    private P2 classUnderTest;
 
     @BeforeEach
     public void setup() {
-        classUnderTest = new Dec_1_P1();
+        classUnderTest = new P2();
     }
 
     @Test
@@ -32,12 +32,15 @@ public class Dec_1_P1Test {
     @Test
     public void testRaw() {
         String testString = """
-                1abc2
-                pqr3stu8vwx
-                a1b2c3d4e5f
-                treb7uchet""";
+                two1nine
+                eightwothree
+                abcone2threexyz
+                xtwone3four
+                4nineeightseven2
+                zoneight234
+                7pqrstsixteen""";
         long solve = classUnderTest.solve(testString);
-        assertEquals(142, solve);
+        assertEquals(281, solve);
     }
 
     @Test

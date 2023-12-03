@@ -1,8 +1,8 @@
-package puzzle.solutions;
+package puzzle.solutions.day.one;
 
 import java.util.Map;
 
-public class Dec_1_P1 {
+public class P1 {
 
     Map<Character, Integer> CHAR_TO_DIGIT = Map.of(
             '0', 0,
