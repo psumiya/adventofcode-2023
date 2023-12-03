@@ -1,32 +1,24 @@
 package puzzle.solutions.day.one;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class P2Test {
 
-    private P2 classUnderTest;
-
-    @BeforeEach
-    public void setup() {
-        classUnderTest = new P2();
-    }
-
     @Test
     public void testNull() {
-        assertEquals(0, classUnderTest.solve(null));
+        assertEquals(0, P2.solve(null));
     }
 
     @Test
     public void testEmpty() {
-        assertEquals(0, classUnderTest.solve("  "));
+        assertEquals(0, P2.solve("  "));
     }
 
     @Test
     public void testNoDigits() {
-        assertEquals(0, classUnderTest.solve("null"));
+        assertEquals(0, P2.solve("null"));
     }
 
     @Test
@@ -39,7 +31,7 @@ public class P2Test {
                 4nineeightseven2
                 zoneight234
                 7pqrstsixteen""";
-        long solve = classUnderTest.solve(testString);
+        long solve = P2.solve(testString);
         assertEquals(281, solve);
     }
 
@@ -1046,7 +1038,7 @@ public class P2Test {
                 nine35gzmlt
                 5sixfour2qxsqkpnq
                 kdkjqdkvgs2""";
-        long solve = classUnderTest.solve(testString);
+        long solve = P2.solve(testString);
         System.out.println("\n\n");
         System.out.println(solve);
     }

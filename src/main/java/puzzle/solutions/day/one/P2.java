@@ -5,10 +5,11 @@ import java.util.Map;
 import java.util.Set;
 
 import static java.util.Map.entry;
+import static puzzle.solutions.utils.Utils.isNullOrBlank;
 
 public class P2 {
 
-    Map<String, Integer> VALID_DIGITS = Map.ofEntries(
+    private static Map<String, Integer> VALID_DIGITS = Map.ofEntries(
             entry("0", 0),
             entry("1", 1),
             entry("2", 2),
@@ -30,14 +31,14 @@ public class P2 {
             entry("nine", 9)
     );
 
-    public long solve(String input) {
+    public static long solve(String input) {
         if (isNullOrBlank(input)) {
             return 0;
         }
         return process(input);
     }
 
-    private long process(String input) {
+    private static long process(String input) {
         String[] lines = input.split("\n");
         long sum = 0;
         for (String line : lines) {
@@ -57,7 +58,7 @@ public class P2 {
         return sum;
     }
 
-    private int findFirstDigit(String line, Set<String> matches) {
+    private static int findFirstDigit(String line, Set<String> matches) {
         if (isNullOrBlank(line)) {
             return 0;
         }
@@ -73,7 +74,7 @@ public class P2 {
         return result;
     }
 
-    private int findLastDigit(String line, Set<String> matches) {
+    private static int findLastDigit(String line, Set<String> matches) {
         if (isNullOrBlank(line)) {
             return 0;
         }
@@ -87,10 +88,6 @@ public class P2 {
             }
         }
         return result;
-    }
-
-    private boolean isNullOrBlank(String input) {
-        return input == null || input.isBlank();
     }
 
 }

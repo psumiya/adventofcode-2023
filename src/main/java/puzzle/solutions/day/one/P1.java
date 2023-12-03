@@ -2,9 +2,11 @@ package puzzle.solutions.day.one;
 
 import java.util.Map;
 
+import static puzzle.solutions.utils.Utils.isNullOrBlank;
+
 public class P1 {
 
-    Map<Character, Integer> CHAR_TO_DIGIT = Map.of(
+    private static Map<Character, Integer> CHAR_TO_DIGIT = Map.of(
             '0', 0,
             '1', 1,
             '2', 2,
@@ -17,14 +19,14 @@ public class P1 {
             '9', 9
     );
 
-    public long solve(String input) {
+    public static long solve(String input) {
         if (isNullOrBlank(input)) {
             return 0;
         }
         return process(input);
     }
 
-    private long process(String input) {
+    private static long process(String input) {
         String[] lines = input.split("\n");
         long sum = 0;
         for (String line : lines) {
@@ -36,7 +38,7 @@ public class P1 {
         return sum;
     }
 
-    private int findFirstDigit(String line) {
+    private static int findFirstDigit(String line) {
         if (isNullOrBlank(line)) {
             return 0;
         }
@@ -51,7 +53,7 @@ public class P1 {
         return 0;
     }
 
-    private int findLastDigit(String line) {
+    private static int findLastDigit(String line) {
         if (isNullOrBlank(line)) {
             return 0;
         }
@@ -64,10 +66,6 @@ public class P1 {
             }
         }
         return 0;
-    }
-
-    private boolean isNullOrBlank(String input) {
-        return input == null || input.isBlank();
     }
 
 }
