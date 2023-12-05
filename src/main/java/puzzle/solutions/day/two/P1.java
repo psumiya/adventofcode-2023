@@ -87,12 +87,4 @@ public class P1 {
         return result;
     }
 
-    private static String getArr(String[] items) {
-        StringBuilder sb = new StringBuilder();
-        for (String item : items) {
-            sb.append(item + " ");
-        }
-        return sb.toString();
-    }
-
 }
